@@ -1,14 +1,20 @@
 package com.usecase1.model;
 
+import java.util.Map;
+
 public class Student {
     private int studentId;
     private String studentName;
-    private Integer[] marks;
+    private Map<String,Integer> marks;
+    private Integer totalMarks;
 
-    public Student(int studentId,String studentName,Integer[] marks){
+    public Student(){}
+    
+    public Student(int studentId,String studentName,Map<String,Integer> marks,Integer totalMarks){
         this.studentId=studentId;
         this.studentName=studentName;
         this.marks=marks;
+        this.totalMarks=totalMarks;
     }
 
     public void setStudentId(int studentId){
@@ -23,19 +29,23 @@ public class Student {
     public String getStudentName(){
         return studentName;
     }
-    public void setMarks(Integer[] marks){
+    public void setMarks(Map<String,Integer> marks){
         this.marks=marks;
     }
-    public Integer[] getMarks(){
+    public Map<String,Integer> getMarks(){
         return marks;
     }
+    public void setTotalMarks(Integer totalMarks){
+        this.totalMarks=totalMarks;
+    }
+    public Integer getTotalMarks(){
+        return totalMarks;
+    }
+
     @Override
     public String toString() {
-        String marks="";
-        for(Integer mark : getMarks())
-            marks=marks+mark+" ";
         return "StudentID : "+studentId+" StudentName : "+studentName
-        +" Marks : "+marks;
+        +" Marks : "+marks.toString()+" TotalMarks : "+totalMarks;
     }
     
 }

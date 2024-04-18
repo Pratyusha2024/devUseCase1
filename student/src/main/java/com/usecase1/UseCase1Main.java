@@ -1,9 +1,10 @@
-import java.util.List;
+package com.usecase1;
 
+import java.util.List;
 import com.usecase1.display.DisplayStudentDetails;
 import com.usecase1.model.Student;
-import com.usecase1.reader.CSVReader;
-import com.usecase1.reader.DataReader;
+import com.usecase1.readers.CSVReader;
+import com.usecase1.readers.DataReader;
 
 public class UseCase1Main{
     public static void main(String[] args) {

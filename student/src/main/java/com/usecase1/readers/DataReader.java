@@ -1,4 +1,4 @@
-package com.usecase1.reader;
+package com.usecase1.readers;
 
 import java.util.List;
 import com.usecase1.model.Student;
